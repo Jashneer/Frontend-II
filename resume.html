@@ -7,43 +7,50 @@
   <link rel="stylesheet" href="resume.css" />
 </head>
 <body>
+
+  <nav>
+    <ul class="navbar">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <h1 class="resume-title">Jashneer Kaur</h1>
 
-  <h2 class="section-heading">Profile</h2>
+  <h2 id="profile" class="section-heading">Profile</h2>
   <p class="section-content">
-    Frontend developer passionate about intuitive design, modular features, and user empowerment through responsive and accessible tools.
+    I am a frontend developer deeply passionate about crafting intuitive interfaces, scalable modules, and empowering users through inclusive and responsive design. My work is driven by the belief that great UX begins with empathy and ends with elegant code. Whether it's onboarding flows, interactive tours, or resume builders—I thrive at the intersection of creativity and structure.
   </p>
 
-  <h2 class="section-heading">Skills</h2>
+  <h2 id="skills" class="section-heading">Skills</h2>
   <ul class="section-content">
-    <li>HTML, CSS, JavaScript, React</li>
-    <li>Responsive & Accessible Design</li>
-    <li>Java</li>
-    <li>DSA</li>
+    <li>HTML, CSS, JavaScript, React, localStorage, DOM manipulation</li>
+    <li>Responsive design with accessibility-first approach</li>
+    <li>Shepherd.js for guided tours</li>
+    <li>Drag-and-drop interfaces, real-time customization</li>
+    <li>Java & Data Structures and Algorithms</li>
   </ul>
 
-  <h2 class="section-heading">Contact Details</h2>
+  <h2 id="contact" class="section-heading">Contact Details</h2>
   <table class="section-content">
-    <tr>
-      <th>Method</th>
-      <th>Details</th>
-    </tr>
-    <tr>
-      <td>Mobile</td>
-      <td>+91-7658876962</td>
-    </tr>
-    <tr>
-      <td>GitHub</td>
-      <td><a href="https://github.com/Jashneer" target="_blank">Jashneer</a></td>
-    </tr>
-    <tr>
-      <td>Email</td>
-      <td><a href="mailto:jashneerkaur9@gmail.com">jashneerkaur9@gmail.com</a></td>
-    </tr>
-    <tr>
-      <td>LinkedIn</td>
-      <td><a href="https://www.linkedin.com/in/jashneer-kaur-441bb4301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Jashneer Kaur</a></td>
-    </tr>
+    <tr><th>Method</th><th>Details</th></tr>
+    <tr><td>Mobile</td><td>+91-7658876962</td></tr>
+    <tr><td>GitHub</td><td><a href="https://github.com/Jashneer" target="_blank">Jashneer</a></td></tr>
+    <tr><td>Email</td><td><a href="mailto:jashneerkaur9@gmail.com">jashneerkaur9@gmail.com</a></td></tr>
+    <tr><td>LinkedIn</td><td><a href="https://www.linkedin.com/in/jashneer-kaur-441bb4301" target="_blank">Jashneer Kaur</a></td></tr>
   </table>
+
+  <script>
+    // Smooth scroll fix for click behavior
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
 </body>
 </html>
